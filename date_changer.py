@@ -11,8 +11,8 @@ issue_date = datetime.date(2024, 12, 29)
 if datetime.date.today() > issue_date:
     status = True
 if status == False:
-    status = 'Заметка в работе'
-else: status = 'Срок выолнения истёк'
-print('Статус заметки: ' + status)
+    status_expired = 'Заметка в работе'
+else: status_expired = 'Срок выолнения истёк'
+print('Статус заметки: ' + status_expired)
 print('Дата создания: ' + str(created_date.day) + '-' + str(created_date.month))
 print('Завершить до: ' + str(issue_date.day) + '-' + str(issue_date.month))
