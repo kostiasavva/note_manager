@@ -101,9 +101,9 @@ print('========================================================')
 
 # Блок 2 по заданию 4 add_list {
 
-print(heading[0] + ' ' + content[0])
-print(heading[1] + ' ' + content[1])
-print(heading[2] + ' ' + content[2])
+print(heading[0].capitalize() + ': ' + content[0].capitalize())
+print(heading[1.capitalize()] + ': ' + content[1].capitalize())
+print(heading[2].capitalize() + ': ' + content[2].capitalize())
 #}
 
 print('Дата создания: ' + str(created_date.day) + '-' + str(created_date.month))
