@@ -1,16 +1,6 @@
-# Задание 4 add_list {
-a = input('Введите заголовок ПЕРВОГО поля: ')
-b = input('Введите заголовок ВТОРОГО поля: ')
-c = input('Введите заголовок ТРЕТЬЕГО поля: ')
-heading = [a, b, c]
-
-a = input(heading[0] + ': ')
-b = input(heading[1] + ': ')
-c = input(heading[2] + ': ')
-
-content = [a, b, c]
-
-#} Также, блок 2 по данному заданию смотрите ниже
+user_name = input('Введите Ваше имя: ')
+title = input('Введите заголовок заметки: ')
+content = input('Опишите суть заметки: ')
 
 import datetime
 
@@ -52,7 +42,7 @@ while True:
     try:
         created_date = datetime.date(created_date_year, created_date_month, created_date_day)
     except ValueError:
-        print('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\nВведите заново КОРРЕКТНУЮ дату!\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
+        print('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\nВведите заново КОРРЕКТНУЮ дату!\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
         continue
     else: break
 
@@ -94,17 +84,28 @@ while True:
     try:
         issue_date = datetime.date(issue_date_year, issue_date_month, issue_date_day)
     except ValueError:
-        print('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\nВведите заново КОРРЕКТНУЮ дату!\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
+        print('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\nВведите заново КОРРЕКТНУЮ дату!\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
         continue
     else: break
+
+# К заданию 4:
+heading = []
+description = []
+heading.append(input('Введите заголовок дополнительного поля №1: '))
+description.append(input('Введите значение: '))
+heading.append(input('Введите заголовок дополнительного поля №2: '))
+description.append(input('Введите значение: '))
+heading.append(input('Введите заголовок дополнителaьного поля №3: '))
+description.append(input('Введите значение: '))
+
 print('========================================================')
+print('Имя пользователя: ' + user_name.capitalize())
+print('Заголовок заметки: ' + title.capitalize())
+print('Описание заметки: ' + content.capitalize())
 
-# Блок 2 по заданию 4 add_list {
-
-print(heading[0].capitalize() + ': ' + content[0].capitalize())
-print(heading[1.capitalize()] + ': ' + content[1].capitalize())
-print(heading[2].capitalize() + ': ' + content[2].capitalize())
-#}
+print(heading[0].capitalize() + ': ' + description[0].capitalize())
+print(heading[1].capitalize() + ': ' + description[1].capitalize())
+print(heading[2].capitalize() + ': ' + description[2].capitalize())
 
 print('Дата создания: ' + str(created_date.day) + '-' + str(created_date.month))
 print('Завершить до: ' + str(issue_date.day) + '-' + str(issue_date.month))
