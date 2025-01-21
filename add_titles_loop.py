@@ -42,7 +42,7 @@ while True:
         continue
 
 for i in range(n):
-    content[3][i] = input(heading[3][i].capitalize()+': ')
+    content[3][i] = input('Поле №' + str(i+1) + '. ' + heading[3][i].capitalize()+': ')
 
 print('========================================================')
 print(heading[0] + content[0].capitalize())
