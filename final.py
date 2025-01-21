@@ -49,15 +49,15 @@ print(heading[2] + content[2].capitalize())
 for i in range(n):
     print('  ' + str(i + 1) +  '. ' + heading[3][i].capitalize() + ': ' + content[3][i].capitalize())
 
-print(heading[4] + created_date.strftime('%d-%m'))
-print(heading[5] + issue_date.strftime('%d-%m'))
+print(heading[4] + content[4].strftime('%d-%m'))
+print(heading[5] + content[5].strftime('%d-%m'))
 
 # Проверка "Срок истёк?"
 status = False
 
 if datetime.today() > issue_date:
     status = True
-if status == False:
+if not status:
     content[6] = 'Заметка в работе'
 else: content[6] = 'Срок выолнения истёк'
 print(heading[6] + content[6])
