@@ -1,5 +1,3 @@
-from time import strftime
-
 user_name = 'Петя Васичкин'
 print('Имя пользователя: ' + user_name)
 title = 'Автомобиль ЗАЗ-968А'
