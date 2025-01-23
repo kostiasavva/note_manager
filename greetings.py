@@ -8,6 +8,8 @@ status = False
 print('Статус заметки: ' + str(status))
 import datetime
 created_date = datetime.date(2024, 12, 23)
-print('Дата создания заметки: ' + str(created_date.day) + '-' + str(created_date.month) + '-' + str(created_date.year))
+print('Дата создания заметки: ' + created_date.strftime('%d-%m-%Y'))
 issue_date = datetime.date(2024, 12, 29)
-print('Дата истечения заметки: ' + str(issue_date.day) + '-' + str(issue_date.month) + '-' + str(issue_date.year))
+print('Дата истечения заметки: ' + issue_date.strftime('%d-%m_%Y'))
+# '%B %d, %Y'
+# datetime.date.strftime
